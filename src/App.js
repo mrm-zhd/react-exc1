@@ -1,15 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
-import WriteText from './WriteTxt.jsx';
+// import WriteText from './WriteTxt.jsx';
+import ShowButton from './components/button/Button.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Writing Text</h1>
-        <WriteText/>
-      </header>
-    </div>
+    <>
+      <ShowButton vari="primary" className="p-10"></ShowButton>
+      <ShowButton vari="error"></ShowButton>
+      <ShowButton vari="warning"></ShowButton>
+      <ShowButton vari="success"></ShowButton>
+    </>
   );
 }
 
