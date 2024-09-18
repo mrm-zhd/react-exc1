@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function ShowBtn(level) {
-    console.log(level.level);
+export default function ShowBtn({level}) {
   return (
     <div>
         <button id='1' className={`border-2 p-4 m-4 rounded-full pointer-events-none
