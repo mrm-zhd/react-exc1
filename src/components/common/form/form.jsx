@@ -1,44 +1,30 @@
 import React,{useState} from 'react';
+import Input from './input.jsx';
 
 export default function ShowForm() {
     const [name, setName] = useState([]);
-    const [email, setEmail] = useState([]);
     const [password, setPassword] = useState([]);
+    const [showResult, setShowResult] = useState(false);
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const formData = '';
-        const nameVal = setName()
-
-
+        setShowResult(!showResult);
     }
     return (
-      <form onSubmit={handleSubmit}>
-        <div>
-        <input
-          type="name"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <>
+        <form  className="flex flex-col gap-4 w-2/3">
+          <Input type='text' placeholder='your name..' handleChange={setName}/>
+          <Input type='password' placeholder='your pass..' handleChange={setPassword}/>
+          <button onClick={handleSubmit} className="bg-green-600 rounded-md p-3 text-white">Submit Form</button>
+        </form>
+          <div>
+          {showResult === true && (
+            <ul>
+              <li>username : {name}</li>
+              <li>password: {password}</li>
+            </ul>
+          )}
         </div>
-        <div>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        </div>
-        <div>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        </div>
-        <div><button type='submit' onClick={handleSubmit}>Submit Form</button></div>
-      </form>
+      </>
     );
   }
