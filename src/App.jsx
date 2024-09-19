@@ -1,16 +1,17 @@
+import { BrowserRouter, Link } from 'react-router-dom';
 import './App.css';
-import ShowForm from './components/common/form/form.jsx';
-// import ListUseers from './components/common/users/ListUsers.jsx';
+import home from './components/common/pages/home';
 
 
 function App() {
     
   return (
     <>
-      <section>
-        <ShowForm />
-      </section>
-      {/* <ListUseers></ListUseers>   */}
+      <BrowserRouter>
+        <routes>
+          <Link to={'home'}>go home</Link>
+        </routes>
+      </BrowserRouter>
     </>
   );
 }
