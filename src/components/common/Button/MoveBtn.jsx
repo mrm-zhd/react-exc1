@@ -1,15 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ShowBtn from './ShowBtn.jsx';
 
 export default function MoveBtn() {
-    let level = 1;
+    const [level,setLevel] = useState(1);
+    console.log(level);
     const handlePrev = () => {
-        level--;
-        return level;
+
+        setLevel(level-1);
     }
     const handleNext = () => {
-        level++;
-        return level;
+        setLevel(level+1);
     }
   return (
     <>
