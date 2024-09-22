@@ -5,7 +5,6 @@ export default function MoveBtn() {
     const [level,setLevel] = useState(1);
     console.log(level);
     const handlePrev = () => {
-
         setLevel(level-1);
     }
     const handleNext = () => {
