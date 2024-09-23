@@ -1,7 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function home() {
+export default function Home() {
   return (
-    <div>home</div>
+    <div>
+      <Link to="/">Go Home</Link><br/>
+      <Link to="/users">Show Users</Link>
+    </div>
   )
 }

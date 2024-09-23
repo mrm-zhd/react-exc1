@@ -1,6 +1,7 @@
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import './App.css';
-import home from './components/common/pages/home';
+// import Home from './components/common/pages/Home.jsx';
+import Routes from './Routes.jsx';
 
 
 function App() {
@@ -8,9 +9,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <routes>
-          <Link to={'home'}>go home</Link>
-        </routes>
+        <Routes />
       </BrowserRouter>
     </>
   );
