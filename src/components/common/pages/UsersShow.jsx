@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import UserLayout from '../layout/UserLayout';
 
 export default function UsersShow() {
     const [users,setUsers] = useState([]);
@@ -13,13 +14,16 @@ export default function UsersShow() {
 });
   return (
     <>
-        {users.map((user) => {
+        {/* {users.map((user) => {
             return(
             <div key={user.id}>
                 <Link to={`/users/${user.id}`}>{user.name}</Link>
                 <br />
             </div>)
-        })}
+        })} */}
+        <UserLayout UsersShow={users}>
+            <Outlet/>
+        </UserLayout>
     </>
   )
 }
