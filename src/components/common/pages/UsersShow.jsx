@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import UserLayout from '../layout/UserLayout';
+import UserListContext from '../../../Context/UserListContext';
 
 export default function UsersShow() {
     const [users,setUsers] = useState([]);
@@ -21,9 +22,11 @@ export default function UsersShow() {
                 <br />
             </div>)
         })} */}
-        <UserLayout UsersShow={users}>
-            <Outlet/>
-        </UserLayout>
+        <UserListContext.Provider value={{usersList: users}}>
+            <UserLayout userList={users}>
+                <Outlet/>
+            </UserLayout>
+        </UserListContext.Provider>
     </>
   )
 }
