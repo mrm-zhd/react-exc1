@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../Header'
-import Footer from '../../Footer'
+import PrdctShow from '../pages/PrdctShow'
+import BasketLayout from './BasketLayout';
 
-export default function MainLayout({children}) {
+
+export default function MainLayout() {
+  const [ShowShop,setShowShop] = useState(true);
   return (
     <div className='min-h-full'>
-        <Header />
-        {children}
-        <Footer />
+        <Header setShow={setShowShop} />
+        {ShowShop ? (<PrdctShow/>):(<BasketLayout/>)}
     </div>
   )
 }

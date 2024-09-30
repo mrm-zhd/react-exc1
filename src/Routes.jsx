@@ -1,7 +1,8 @@
 import { useRoutes } from "react-router-dom"
 import Home from "./components/common/pages/Home";
-import UsersShow from "./components/common/pages/UsersShow";
+import UsersShow from "./components/common/pages/PrdctShow";
 import UserInfo from "./components/common/pages/UserInfo";
+import BasketLayout from "./components/common/layout/BasketLayout";
 
 const Routes = () => {
     const myRoutes = useRoutes([
@@ -10,14 +11,14 @@ const Routes = () => {
             element: <Home />,
         },
         {
-            path: "/users",
-            element: <UsersShow />,
-            children:[
-                {
-                    path: "/users:id",
-                    element: <UserInfo/>,
-                },
-            ],
+            path: "/basket",
+            element: <BasketLayout />,
+            // children:[
+            //     {
+            //         path: "/users:id",
+            //         element: <UserInfo/>,
+            //     },
+            // ],
         },
     ]);
 return myRoutes;
