@@ -11,7 +11,7 @@ function App() {
     <>
       <BrowserRouter>
         <MainLayout>
-          <Routes />
+          {/* <Routes /> */}
         </MainLayout>
       </BrowserRouter>
     </>

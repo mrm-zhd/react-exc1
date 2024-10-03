@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
-import Header from '../../Header'
-import PrdctShow from '../pages/PrdctShow'
-import BasketLayout from './BasketLayout';
-
+import InsForm from '../pages/InsForm'
+import ListShow from '../pages/ListShow'
 
 export default function MainLayout() {
-  const [ShowShop,setShowShop] = useState(true);
   return (
-    <div className='min-h-full'>
-        <Header setShow={setShowShop} />
-        {ShowShop ? (<PrdctShow/>):(<BasketLayout/>)}
+    <div className='min-h-full grid grid-cols-2'>
+        <InsForm  />
+        <ListShow />
     </div>
   )
 }
