@@ -18,8 +18,7 @@ export default function PrdctShow() {
             setPrdcts(data);
         };
         fetchData();
-});
-console.log(card);
+},[]);
 
   return (
     <>

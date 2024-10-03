@@ -4,12 +4,11 @@ import PrdctShow from '../pages/PrdctShow'
 import BasketLayout from './BasketLayout';
 
 
-export default function MainLayout() {
-  const [ShowShop,setShowShop] = useState(true);
+export default function MainLayout({children}) {
   return (
     <div className='min-h-full'>
-        <Header setShow={setShowShop} />
-        {ShowShop ? (<PrdctShow/>):(<BasketLayout/>)}
+        <Header  />
+{children}
     </div>
   )
 }

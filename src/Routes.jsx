@@ -3,6 +3,7 @@ import Home from "./components/common/pages/Home";
 import UsersShow from "./components/common/pages/PrdctShow";
 import UserInfo from "./components/common/pages/UserInfo";
 import BasketLayout from "./components/common/layout/BasketLayout";
+import Basket from "./components/common/pages/Basket";
 
 const Routes = () => {
     const myRoutes = useRoutes([
@@ -12,7 +13,7 @@ const Routes = () => {
         },
         {
             path: "/basket",
-            element: <BasketLayout />,
+            element: <Basket />,
             // children:[
             //     {
             //         path: "/users:id",
