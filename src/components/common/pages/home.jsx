@@ -13,7 +13,6 @@ export default function Home() {
       {/* <UsersShow className={"col-end-2"}/>
       <UserInfo className={"col-start-2 col-end-5"} /> */}
       {/* <Link to="/">Go Home</Link><br/> */}
-      <Link to="/users">Show Users</Link>
        <PrdctShow />
     </div>
       </MainLayout>
